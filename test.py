@@ -1,1 +1,1 @@
-print("test-conflict")
+print("test-merge-conflict")
