@@ -9,6 +9,7 @@ jobs:
 
     runs-on: ubuntu-latest
 
+
     steps:
     - name: Checkout code
       uses: actions/checkout@v4
@@ -23,6 +24,9 @@ jobs:
         python -m pip install --upgrade pip
         python -m pip install poetry
         poetry install
+
+    - name: Install make
+      run: sudo apt-get install make
 
   test:
     needs: build
